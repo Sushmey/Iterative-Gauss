@@ -1,7 +1,7 @@
 #Install "sympy" library in your machine before running this program
 from sympy import *
 #Steepest descent
-x,y,a,z= symbols('x y a z') #Z incase you have a three variable equation
+x,y,a,z= symbols('x y a z') #z incase you have a three variable equation
 grad = [] #To store the gradient
 s = [] #To store the direction of the slope
 temp = [] #Temporary variable
@@ -26,7 +26,7 @@ if(variable == 2):
          s.append(-grad[0]) #To push the x-coord of S-direction in the list
          s.append(-grad[1]) #To push the y-coord of S-direction in the list
          temp.append(xi + (a*s[0])) #To push the x-coord of xi equation in the list
-         temp.append(yi + (a*s[1])) #To push the x-coord of yi equation in the list
+         temp.append(yi + (a*s[1])) #To push the y-coord of yi equation in the list
          alphaEq = equation.subs([(x,temp[0]),(y,temp[1])]) #For brevity
          tempEq = Eq(diff(alphaEq,a),0) #Substituting and differentiating the eq with unknown alpha and equating with 0
          alpha = list(solveset(tempEq,a)) #Solving for alpha 
@@ -70,14 +70,14 @@ elif(variable == 3):
          s.append(-grad[1]) #To push the y-coord of S-direction in the list
          s.append(-grad[2]) #To push the z-coord of S-direction in the list
          temp.append(xi + (a*s[0])) #To push the x-coord of xi equation in the list
-         temp.append(yi + (a*s[1])) #To push the x-coord of yi equation in the list
-         temp.append(zi + (a*s[2])) #To push the x-coord of zi equation in the list
+         temp.append(yi + (a*s[1])) #To push the y-coord of yi equation in the list
+         temp.append(zi + (a*s[2])) #To push the z-coord of zi equation in the list
          alphaEq = equation.subs([(x,temp[0]),(y,temp[1]),(z,temp[2])]) #For brevity
          tempEq = Eq(diff(alphaEq,a),0) #Substituting and differentiating the eq with unknown alpha and equating with 0
          alpha = list(solveset(tempEq,a)) #Solving for alpha 
          xi = round(xi + (alpha[0]*s[0]),decimals) #Calculating the new x-coords
          yi = round(yi + (alpha[0]*s[1]),decimals) #Calculating the new y-coords
-         zi = round(zi + (alpha[0]*s[2]),decimals) #Calculating the new y-coords
+         zi = round(zi + (alpha[0]*s[2]),decimals) #Calculating the new z-coords
          result.append(diff(equation,x).subs([(x,xi),(y,yi),(z,zi)]))
          result.append(diff(equation,y).subs([(x,xi),(y,yi),(z,zi)]))
          result.append(diff(equation,z).subs([(x,xi),(y,yi),(z,zi)]))
