@@ -13,7 +13,7 @@ Clone the repository using
 
 ```
 git clone https://github.com/Sushmey/Iterative-Gauss.git
-cd Iteractive-Gauss
+cd Iterative-Gauss
 ```
 Run each program like a normal python program.
 ```
