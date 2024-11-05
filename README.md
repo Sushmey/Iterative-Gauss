@@ -1,6 +1,4 @@
 # Iterative-Gauss
-My first repository! I wrote these programs to help solve my assignments quicker.
-<br>
 This contains three programs written in python. 
 <ul>
   <li>Gauss-Seidel
